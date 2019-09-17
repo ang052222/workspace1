@@ -1,5 +1,6 @@
 package kosta.mission;
 
+import java.util.Scanner;
 
 /*
  * 프로그램 이름 : Hello 출력
@@ -18,21 +19,28 @@ public class Mission01 {
 		// 총점과 평균을 구하자
 		// 총점과 평균을 출력해 보자.
 		
-		
-//		ㅁ   
-//		ㅁ
-//		ㅁ
-//		ㅁ
-//		ㅁ
-//		
+		Scanner sc = new Scanner(System.in);
+
 		
 		int korea, english, math; 		// 국어 영어 수학 총점
 		
 		int average, total; // 평균
 		
-		korea = 5;
-		english = 5;
-		math = 3;
+		/*
+		 * korea = 5; english = 5; math = 3;
+		 */
+		
+		System.out.print("국어 점수를 입력하세요 : ");
+		korea = sc.nextInt();
+		
+		System.out.print("영어 점수를 입력하세요 : ");
+		english = sc.nextInt();
+		
+		System.out.print("수학 점수를 입력하세요 : ");
+		math = sc.nextInt();
+		
+		
+		
 		
 		total = korea + english + math ;
 		average = (int)(total / 3.0);

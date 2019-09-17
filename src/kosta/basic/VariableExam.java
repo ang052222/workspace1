@@ -43,6 +43,18 @@ public class VariableExam {
 		System.out.println(num4);  // int형 크기 만큼 잘라 주었기때문에 뒷 소수점이 손실 되었다. 
 		
 		
+		int num5 = 100 % 3;
+		System.out.println("num5 : " + num5);
+		
+		int num6 = num5 + 2 ;
+		System.out.println("num6 : " + num6);
+		
+		num5 += 2;
+		System.out.println("num5 " + num5);
+				
+		
+		
+		
 		
 		
 		
