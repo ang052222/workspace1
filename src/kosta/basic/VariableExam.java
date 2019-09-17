@@ -154,6 +154,11 @@ public class VariableExam {
 		
 		
 		
+		System.out.println();
+		System.out.println("------------------------------------------");
+		System.out.println();
+		
+		
 		
 		
 		

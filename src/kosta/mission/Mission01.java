@@ -51,7 +51,7 @@ public class Mission01 {
 		
 		
 		System.out.println();
-		
+	/*	
 		if(korea <= 60) {
 			System.out.println("국어 성적 : F");
 		}else if(korea <= 70) {
@@ -101,8 +101,90 @@ public class Mission01 {
 			System.out.println("성적 평균 : A");
 		}
 		
+	*/	
 		
 		
+		
+		
+		switch (korea/10) {
+		case 10 :
+		case 9 :
+			System.out.println("국어 : A학점");
+			break;
+		case 8 :
+			System.out.println("국어 : B학점");
+			break;
+		case 7 :
+			System.out.println("국어 : C학점");
+			break;
+		case 6 :
+			System.out.println("국어 : D학점");
+			break;
+
+		default:
+			System.out.println("국어 : F학점");
+			break;
+		}
+		
+		switch (english/10) {
+		case 10 :
+		case 9 :
+			System.out.println("영어 : A학점");
+			break;
+		case 8 :
+			System.out.println("영어 : B학점");
+			break;
+		case 7 :
+			System.out.println("영어 : C학점");
+			break;
+		case 6 :
+			System.out.println("영어 : D학점");
+			break;
+
+		default:
+			System.out.println("영어 : F학점");
+			break;
+		}
+		
+		switch (math/10) {
+		case 10 :
+		case 9 :
+			System.out.println("수학 : A학점");
+			break;
+		case 8 :
+			System.out.println("수학 : B학점");
+			break;
+		case 7 :
+			System.out.println("수학 : C학점");
+			break;
+		case 6 :
+			System.out.println("수학 : D학점");
+			break;
+
+		default:
+			System.out.println("수학 : F학점");
+			break;
+		}
+		
+		switch (average/10) {
+		case 10 :
+		case 9 :
+			System.out.println("평균학점 : A학점");
+			break;
+		case 8 :
+			System.out.println("평균학점 : B학점");
+			break;
+		case 7 :
+			System.out.println("평균학점 : C학점");
+			break;
+		case 6 :
+			System.out.println("평균학점 : D학점");
+			break;
+
+		default:
+			System.out.println("평균학점 : F학점");
+			break;
+		}
 		
 		
 		
