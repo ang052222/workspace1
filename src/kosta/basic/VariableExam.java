@@ -54,6 +54,103 @@ public class VariableExam {
 				
 		
 		
+		int x = 10;
+		int y = 0;
+		
+		y = x++;
+		
+		System.out.println("x : " + x);
+		System.out.println("y : " + y);
+		
+		System.out.println("Hello, Java. \n하이하이");
+		System.out.println("나는 \"비틀즈는 1970년에 해체됐어요\"라고 말했다. ");
+		
+		String str1 = "살어리 살어리랏다 청산에 살어리랏다 " + "머루랑 다래랑 먹고 청산에 살어리랏다 " + "얄리얄리 얄라셩 얄라리 얄라";
+		
+		System.out.println(str1);
+		
+		
+		String str2 = "70" + 10 + "20";
+		System.out.println(str2);
+		
+		int num7 = Integer.parseInt(str2);
+		int result = num7 + 10;
+		System.out.println(result);
+		
+		
+		//----------------------------------
+		
+		System.out.println("//----------------------------------");
+		
+		int a = 3, b= 5, c= 9;
+		String result2;
+		
+		if(a==3 & b==5) {
+			System.out.println("두 값이 모두 true여서 true");
+			
+		}else {
+			System.out.println("나오면 오답1");
+		}
+		
+		if(a==5 | c== 3) {
+			System.out.println("이게 나오면 true라느ㅡㄴ 것 오답2");
+		}else {
+			System.out.println("두 값이 모두 false여서  false");
+			
+		}
+		
+		
+		if(b==5 ^ a==9) {
+			System.out.println("하나가 true 나머지 하나가 false면 true");
+		}else {
+			System.out.println("나오면 오답3");
+		}
+		
+		if(!(a == b)) {
+			System.out.println("값이 false면 true가 되어서 true 됨!");
+		}else {
+			System.out.println("나오면 오답4");
+		}
+		
+		System.out.println();
+		System.out.println("-삼항연산자--------------------------------------------");
+		
+		int score = 65;
+		char grade = (score > 90) ? 'A' : ((score > 80) ? 'B' : 'C');
+		
+		System.out.println(grade);
+		
+		
+		
+		int score1 = 30, score2 = 50;
+		int max = (score1 > score2) ? score1 : score2;
+		
+		System.out.println("max : " + max);
+		
+		
+		
+		System.out.println();
+		System.out.println("-----------------------------------------------");
+		System.out.println();
+		
+		// 문자열 : String 클래스
+		// 문자열 비교 == => equals() 사용한다.
+		
+		String str3 = "abc";
+		String str4 = new String("abc");  // 원래는 이렇게 생성해야 한다. String만큼은 너무 자주 사용하기 때문에 생략해도 되도록 약속함.
+		
+	
+		if(str3 == str4) {
+			System.out.println("str3와 str4가 같음");
+		}else {
+			System.out.println("str3와 str4가 다름");
+		}
+		
+		if(str3.equals(str4)) {
+			System.out.println("str3와 str4가 같음");
+		}else {
+			System.out.println("str3와 str4가 다름");
+		}
 		
 		
 		
