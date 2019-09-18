@@ -10,6 +10,24 @@ import java.util.Scanner;
  * 
  */
 public class Mission01 {
+	
+	
+	public static int totalSubject(int korea, int english, int math) {
+		
+		int sum = korea + english + math;
+		
+		return sum;
+	}
+	
+	public static int averageSubject (int sum) {
+		
+		int average = sum / 3;
+		
+		return average;
+	}
+	
+	
+	
 
 	public static void main(String[] args) {
 
@@ -24,7 +42,7 @@ public class Mission01 {
 		
 		int korea, english, math; 		// 국어 영어 수학 총점
 		
-		int average, total; // 평균
+		//int average, total; // 평균
 		
 		/*
 		 * korea = 5; english = 5; math = 3;
@@ -42,11 +60,18 @@ public class Mission01 {
 		System.out.println();
 		
 		
-		total = korea + english + math ;
-		average = (int)(total / 3.0);
+		//total = korea + english + math ;
+		//average = (int)(total / 3.0);
 		
-		System.out.println("총점 : " + total + "점");
-		System.out.println("평균 : " + average + "점");
+		
+		
+		int sum1 = totalSubject(korea, english, math);
+		
+		int average1 = averageSubject(sum1);
+		
+		
+		System.out.println("총점 : " + sum1 + "점");
+		System.out.println("평균 : " + average1 + "점");
 		//System.out.printf("평균 : %,2f ", average );
 		
 		
@@ -105,90 +130,90 @@ public class Mission01 {
 		
 		
 		
+		/*	
+			switch (korea/10) {
+			case 10 :
+			case 9 :
+				System.out.println("국어 : A학점");
+				break;
+			case 8 :
+				System.out.println("국어 : B학점");
+				break;
+			case 7 :
+				System.out.println("국어 : C학점");
+				break;
+			case 6 :
+				System.out.println("국어 : D학점");
+				break;
 		
-		switch (korea/10) {
-		case 10 :
-		case 9 :
-			System.out.println("국어 : A학점");
-			break;
-		case 8 :
-			System.out.println("국어 : B학점");
-			break;
-		case 7 :
-			System.out.println("국어 : C학점");
-			break;
-		case 6 :
-			System.out.println("국어 : D학점");
-			break;
-
-		default:
-			System.out.println("국어 : F학점");
-			break;
-		}
+			default:
+				System.out.println("국어 : F학점");
+				break;
+			}
+			
+			switch (english/10) {
+			case 10 :
+			case 9 :
+				System.out.println("영어 : A학점");
+				break;
+			case 8 :
+				System.out.println("영어 : B학점");
+				break;
+			case 7 :
+				System.out.println("영어 : C학점");
+				break;
+			case 6 :
+				System.out.println("영어 : D학점");
+				break;
 		
-		switch (english/10) {
-		case 10 :
-		case 9 :
-			System.out.println("영어 : A학점");
-			break;
-		case 8 :
-			System.out.println("영어 : B학점");
-			break;
-		case 7 :
-			System.out.println("영어 : C학점");
-			break;
-		case 6 :
-			System.out.println("영어 : D학점");
-			break;
-
-		default:
-			System.out.println("영어 : F학점");
-			break;
-		}
+			default:
+				System.out.println("영어 : F학점");
+				break;
+			}
+			
+			switch (math/10) {
+			case 10 :
+			case 9 :
+				System.out.println("수학 : A학점");
+				break;
+			case 8 :
+				System.out.println("수학 : B학점");
+				break;
+			case 7 :
+				System.out.println("수학 : C학점");
+				break;
+			case 6 :
+				System.out.println("수학 : D학점");
+				break;
 		
-		switch (math/10) {
-		case 10 :
-		case 9 :
-			System.out.println("수학 : A학점");
-			break;
-		case 8 :
-			System.out.println("수학 : B학점");
-			break;
-		case 7 :
-			System.out.println("수학 : C학점");
-			break;
-		case 6 :
-			System.out.println("수학 : D학점");
-			break;
-
-		default:
-			System.out.println("수학 : F학점");
-			break;
-		}
+			default:
+				System.out.println("수학 : F학점");
+				break;
+			}
+			
+			switch (average/10) {
+			case 10 :
+			case 9 :
+				System.out.println("평균학점 : A학점");
+				break;
+			case 8 :
+				System.out.println("평균학점 : B학점");
+				break;
+			case 7 :
+				System.out.println("평균학점 : C학점");
+				break;
+			case 6 :
+				System.out.println("평균학점 : D학점");
+				break;
 		
-		switch (average/10) {
-		case 10 :
-		case 9 :
-			System.out.println("평균학점 : A학점");
-			break;
-		case 8 :
-			System.out.println("평균학점 : B학점");
-			break;
-		case 7 :
-			System.out.println("평균학점 : C학점");
-			break;
-		case 6 :
-			System.out.println("평균학점 : D학점");
-			break;
-
-		default:
-			System.out.println("평균학점 : F학점");
-			break;
-		}
-		
-		
-		
-		
+			default:
+				System.out.println("평균학점 : F학점");
+				break;
+			}
+			
+			
+			
+			*/
 		
 		
 		
