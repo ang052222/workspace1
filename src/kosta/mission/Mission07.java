@@ -5,30 +5,8 @@ import java.util.Scanner;
 public class Mission07 {
 
 	
-	public static void cm(int[] arr) {
-		
-		Scanner sc = new Scanner(System.in);
-		
-		
-		
-		for(int i = 0 ; i < arr.length ; i++) {
-			
-			System.out.print((i+1) +"번째 사람의 키를 입력하세요 : ");
-			arr[i] = sc.nextInt();
-			
-		}
-		
-		System.out.println();
-		/*System.out.print("배열 되니??");
-		for(int n : arr) {
-			System.out.print(n);
-		}
-		*/
-		
-	}
 	
-	
-	public static void taller(int[] arr) {
+	public static int taller(int[] arr) {
 		
 		int best = 0;
 		
@@ -40,8 +18,10 @@ public class Mission07 {
 		}
 		
 		
-		System.out.println("가장 큰 키는 : " + best + "cm 입니다. ");
+		//System.out.println("가장 큰 키는 : " + best + "cm 입니다. ");
 		
+		
+		return best; 
 	}
 	
 	
@@ -52,10 +32,35 @@ public class Mission07 {
 		// 배열을 이용하여 각 사람의 키를 입력 받아
 		// 가장 큰 키를 출력하세요!
 
-		int[] arr = new int[5];
+		Scanner sc = new Scanner(System.in);
 		
-		cm(arr);
-		taller(arr);
+		System.out.print("학생 수를 입력 하세요 : ");
+		int n = sc.nextInt();
+		
+		
+		int[] arr = new int[n];
+		
+		
+		
+	for(int i = 0 ; i < arr.length ; i++) {
+			
+			System.out.print((i+1) +"번째 사람의 키를 입력하세요 : ");
+			arr[i] = sc.nextInt();
+			
+		}
+		
+		System.out.println();
+		
+		/*System.out.print("배열 되니??");
+		for(int n : arr) {
+			System.out.print(n);
+		}
+		*/
+		
+		
+		//taller(arr);
+		
+		System.out.println("가장 큰 키는 : " + taller(arr) + "cm 입니다. ");
 		
 	}
 	
