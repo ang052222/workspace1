@@ -71,6 +71,7 @@ public class LoopExam02 {
 		*/
 		
 		
+		
 		int m = 4;
 		
 		for(int i = 0 ; i < m ; i++) {
