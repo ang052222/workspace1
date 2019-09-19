@@ -13,7 +13,7 @@ public class Mission09 {
 		System.out.print("추가할 과일의 이름을 적어주세요.");
 		String asw = sc.nextLine();
 		
-		fruits[count] = asw;
+		fruits[count] = asw;					// fruits[count++] = asw; 로 해도 된다. 
 		count++;
 		
 		
@@ -27,11 +27,43 @@ public class Mission09 {
 		System.out.println("★★추가 된 과일의 이름들★★");
 		System.out.println();
 		
-		for(String n : fruits) {
-			System.out.println(n);
+		/*	for(String n : fruits) {      
+				System.out.println(n);
+			}*/
+		
+		for(int i = 0 ; i < count ; i++) {
+			System.out.println(fruits[i]);
 		}
 		System.out.println();
 		System.out.println();
+		
+	}
+	
+	// 배열에 있는 과일을 검색하는 메서드
+	// 과일명 → 인덱스를 출력 / 존재하지 않습니다. 
+	public static void search(String[] fruits) {
+		Scanner sc = new Scanner(System.in);
+		
+		String fname;
+		
+		System.out.print("검색하고 싶은 과일을 입력하세요. ");
+		fname = sc.nextLine();
+		
+		
+		
+		for(int i = 0 ; i< count ; i++) {
+			if(fruits[i].equals(fname)) {
+				System.out.println();
+				System.out.println();
+				System.out.println("★★★★★검색 결과입니다.★★★★★★★ ");
+				System.out.println(i+ "번째에 저장되어있습니다.");
+				System.out.println();
+				break;
+			
+			}
+		}
+		
+		
 		
 	}
 	
@@ -71,7 +103,7 @@ public class Mission09 {
 				break;
 
 			case 3:
-				
+				search(fruits);
 				break;
 
 			case 4:
