@@ -49,18 +49,26 @@ public class Mission09 {
 		System.out.print("검색하고 싶은 과일을 입력하세요. ");
 		fname = sc.nextLine();
 		
-		
+		int index = -1;
 		
 		for(int i = 0 ; i< count ; i++) {
 			if(fruits[i].equals(fname)) {
-				System.out.println();
+				/*System.out.println();
 				System.out.println();
 				System.out.println("★★★★★검색 결과입니다.★★★★★★★ ");
 				System.out.println(i+ "번째에 저장되어있습니다.");
 				System.out.println();
-				break;
+				break;*/
+				
+				index = i;
 			
 			}
+		}
+		
+		if(index != -1) {
+			System.out.println(index +"번째에 존재합니다. ");
+		}else {
+			System.out.println("검색 결과가 존재하지 않습니다.  ");
 		}
 		
 		
