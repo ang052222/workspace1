@@ -14,7 +14,7 @@ public class Mission05 {
 			System.out.print(subject[i]+" 성적을 입력하세요 : ");
 			arr[i] = sc.nextInt();
 			
-			System.out.println(arr[i]);
+			//System.out.println(arr[i]);
 			
 			arr[3] += arr[i];
 		}
