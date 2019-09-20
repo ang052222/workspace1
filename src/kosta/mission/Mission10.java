@@ -31,8 +31,12 @@ public class Mission10 {
 		// 1회전 : (1번 2번) → (1번 3번) → (1번 4번)
 		// 2회전 : (2번 3번) → (2번 4번)
 		// 3회전 : (3번 4번)
-		
-		
+		System.out.println("여기얌");
+		int emp;
+		int ar[];
+				ar = arr[1];
+		for(int m : ar) System.out.println(m);
+		System.out.println("여기얌");
 		
 		
 		// 정렬 (평균을 기준으로 내림차순)
