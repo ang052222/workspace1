@@ -14,6 +14,8 @@ public class MemberMain {
 		mb2.print();
 		mb3.print();
 		
+		
+		
 	}
 
 }

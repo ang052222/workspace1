@@ -4,10 +4,11 @@ public class AccountMain {
 
 	public static void main(String[] args) {
 
-		Account obj, obj2; 
+		Account obj, obj2, obj3; 
 		
 		obj = new Account("1111-1111", "홍길동", 2000 );  // obj는 레퍼런스 변수이다. Account는 클래스타입
 		obj2 = new Account("2222-2222", "박길동", 50000);
+		obj3 = new Account();
 		
 		
 		

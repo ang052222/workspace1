@@ -11,22 +11,27 @@ public class Account {
 	
 	
 	
-	// 생성자(Constructor) : 객체를 초기화
-	public Account(String accountNo, String ownerName, int balance) {  // 파라미터값과 멤버변수는 다른 것임. 파라미터값은 지역변수이다.
-		
-		this.accountNo = accountNo;
-		this.ownerName = ownerName;
-		this.balance = balance;
-		
+	public Account() {
+		// 디폴트 생성자
 	}
 	
 	
 	
-	
-	
-	
-	
-	
+	public Account(String accountNo, String ownerName, int balance) {
+		super();
+		this.accountNo = accountNo;
+		this.ownerName = ownerName;
+		this.balance = balance;
+	}
+
+
+
+
+
+
+
+
+
 	// 공통된 기능 : 행동 → 멤버메소드(operation)
 	// 입금하다. 출금하다. 
 	
