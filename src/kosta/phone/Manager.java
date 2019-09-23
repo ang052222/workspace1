@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Manager {
 	
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
 	// 배열선언, 생성
 	PhoneInfo arr[];
 	static int count;
@@ -22,7 +26,7 @@ public class Manager {
 	public void addPhoneInfo() {
 		
 		
-		Scanner sc = new Scanner(System.in);
+		
 		
 		
 		System.out.print("이름을 입력 하세요 : ");
@@ -67,6 +71,25 @@ public class Manager {
 		
 		for(int i = 0 ; i < count ; i++) {
 			arr[i].show();
+		}
+		
+	}
+	
+	
+	
+	public void searchPhoneInfo() {
+		
+		
+		System.out.print("검색 하실 내용을 적어주세요 : ");
+		String text = sc.nextLine();
+		
+		for(int i = 0 ; i < count ; i++) {
+		
+		 if(text.equals(arr[i].name) || text.equals(arr[i].phoneNo) || text.equals(arr[i].birth) ) {
+			 arr[i].show();
+			 break;
+		 }
+				
 		}
 		
 	}
