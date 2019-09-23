@@ -20,7 +20,7 @@ public class Book {
 	}
 	
 	
-	public void dcBook() {
+	/*public void dcBook() {
 		
 		if(name.equals("JAVA")) {
 			dc = 0.75;
@@ -34,7 +34,23 @@ public class Book {
 		
 		
 		//System.out.println("dc뭐야 : " + dc);
+	}*/
+	
+	
+	public void dcBook() {
+		
+		if(price >= 30000) {
+			dc = 0.75;
+		}else if(price >= 20000) {
+			dc = 0.8;
+		}else if(price >= 15000) {
+			dc = 0.85;
+		}
+		
+		
+		//System.out.println("dc뭐야 : " + dc);
 	}
+	
 	
 	
 	public void totalPrice() {
@@ -45,6 +61,7 @@ public class Book {
 		
 		//System.out.println("토탈프라이스뭐야 : " + tPrice);
 	}
+	
 	
 	public void totalPrint() {
 		
