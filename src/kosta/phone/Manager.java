@@ -30,21 +30,21 @@ public class Manager {
 		
 		
 		
-		/*System.out.print("이름을 입력 하세요 : ");
-		String name = sc.nextLine();
+		System.out.print("이름을 입력 하세요 : ");
+		String name = DataInput.sc.nextLine();
 		
 		System.out.print("전화번호를 입력 하세요 : ");
-		String phoneNo = sc.nextLine();
+		String phoneNo = DataInput.sc.nextLine();
 		
 		System.out.print("생일을 입력 하세요 : ");
-		String birth = sc.nextLine();
+		String birth = DataInput.sc.nextLine();
 		
 		System.out.println();
-		System.out.println();*/
+		System.out.println();
 		
 		
 		
-		arr[count++] = new PhoneInfo(di.addName(), di.addPhone(), di.addBirth());
+		arr[count++] = new PhoneInfo(name, phoneNo, birth);
 		
 		
 		
@@ -103,9 +103,10 @@ public class Manager {
 		
 		*/
 		
-		di.searchText();
+		System.out.print("검색 하실 내용을 적어주세요 : ");
+		String text = DataInput.sc.nextLine();
 		
-		/*int idx = -1;
+		int idx = -1;
 		
 		
 		System.out.println();
@@ -114,7 +115,7 @@ public class Manager {
 		
 		for(int i = 0 ; i < count ; i++) {
 			
-			 if(di.searchText().equals(arr[i].getName()) ) {
+			 if(text.equals(arr[i].getName()) ) {
 				 arr[i].show();
 				 
 				 idx = i;
@@ -127,7 +128,7 @@ public class Manager {
 			
 			System.out.println("해당하는 이름이 없습니다. ");
 		}
-		*/
+		
 		
 		
 		

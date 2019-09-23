@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class DataInput {
 
-	Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
 	
 	public DataInput() {}
 	
-	public String mainMenu() {
+	/*public String mainMenu() {
 		
 		
 		System.out.println();
@@ -59,6 +59,6 @@ public class DataInput {
 		
 		return text;
 	}
-	
+	*/
 	
 }

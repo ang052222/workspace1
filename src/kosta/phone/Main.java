@@ -15,17 +15,17 @@ public class Main {
 		
 		
 		while(true) {
-			/*System.out.println();
+			System.out.println();
 			System.out.println("1. 추가");
 			System.out.println("2. 전체출력");
 			System.out.println("3. 검색");
 			System.out.println("4. 종료");
 			System.out.println();
 			System.out.print("메뉴입력 : ");
-			String menu = di.sc.nextLine();*/
+			String menu = di.sc.nextLine();
 			
 			
-			switch (di.mainMenu()) {
+			switch (menu) {
 			case "1": mg.addPhoneInfo();
 				
 				break;
