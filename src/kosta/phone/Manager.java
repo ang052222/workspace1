@@ -1,0 +1,75 @@
+package kosta.phone;
+
+import java.util.Scanner;
+
+public class Manager {
+	
+	// 배열선언, 생성
+	PhoneInfo arr[];
+	static int count;
+	
+	
+	
+	public Manager() {
+		
+		arr = new PhoneInfo[10];		// 
+	}
+	
+	
+	
+	
+	//전화번호 추가
+	public void addPhoneInfo() {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.print("이름을 입력 하세요 : ");
+		String name = sc.nextLine();
+		
+		System.out.print("전화번호를 입력 하세요 : ");
+		String phoneNo = sc.nextLine();
+		
+		System.out.print("생일을 입력 하세요 : ");
+		String birth = sc.nextLine();
+		
+		System.out.println();
+		System.out.println();
+		
+		
+		
+		arr[count++] = new PhoneInfo(name, phoneNo, birth);
+		
+		
+		
+		/*for(int i = 0 ; i < arr.length ; i++) {
+			arr[i] = new PhoneInfo(name, phoneNo, birth);
+		}*/
+		
+		
+		
+		
+	}
+	
+	
+	// 전체목록 출력
+	public void listPhoneInfo() {
+		
+		
+		System.out.println("********************************");
+		System.out.println("전화번호부 출력");
+		System.out.println("이름 \t 전화번호 \t 생일");
+		
+		
+		
+		// 배열안에 있는 phoneinfo객체의 show() 메소드를 출력
+		
+		for(int i = 0 ; i < count ; i++) {
+			arr[i].show();
+		}
+		
+	}
+	
+
+}
