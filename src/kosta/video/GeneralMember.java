@@ -2,9 +2,9 @@ package kosta.video;
 
 public class GeneralMember {
 
-	private String id;			// 회원 아이디
-	private String name;		// 회원 이름
-	private String address;		// 회원 주소
+	private String id;				// 회원 아이디
+	private String name;			// 회원 이름
+	private String address;			// 회원 주소
 	private Video rentalVideo;		// 내가 빌린 비디오 객체
 	
 	public GeneralMember() {}

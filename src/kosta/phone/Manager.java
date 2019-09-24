@@ -1,7 +1,5 @@
 package kosta.phone;
 
-import java.util.Scanner;
-
 public class Manager {
 	
 	
