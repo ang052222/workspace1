@@ -43,17 +43,6 @@ public class Video {
 		this.videoActor = videoActor;
 	}
 
-	// 비디오 정보 출력 메소드
-	public void videoPrint() {
-		
-		System.out.println();
-		System.out.println("★★★비디오 정보 출력 메소드★★★");
-		System.out.println("회원이 대여한 비디오 번호 :" + getVideoName());
-		System.out.println("회원이 대여한 비디오 제목 : " + getVideoName());
-		System.out.println("회원이 대여한 비디오 주인공 : " + getVideoActor());
-	}
-	
-	
 	
 	
 	
