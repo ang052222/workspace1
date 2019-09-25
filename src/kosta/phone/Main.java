@@ -6,7 +6,6 @@ public class Main {
 
 		// 1. 추가 2. 전체출력 3. 종료
 		
-		//Scanner sc = new Scanner(System.in);
 		Manager mg = new Manager();
 		DataInput di = new DataInput();
 		

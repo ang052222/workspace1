@@ -3,7 +3,6 @@ package kosta.phone;
 public class Manager {
 	
 	
-	//Scanner sc = new Scanner(System.in);
 	DataInput di = new DataInput();
 	
 	
