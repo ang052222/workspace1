@@ -16,20 +16,20 @@ public class Main {
 		
 		System.out.println();
 		
-		/*for(int i = 0 ; i < arr.length ; i++) {  // 오버라이딩으로 가능하다. 
-			arr[i].generalMemberPrint();
+		for(int i = 0 ; i < arr.length ; i++) {  // 오버라이딩으로 가능하다. 
+			arr[i].memberPrint();
 			
-		}*/
+		}
 			
 		
-		arr[0].generalMemberPrint();
-		arr[1].generalMemberPrint();
-		SpecialMember sp = (SpecialMember)arr[1];
-		sp.specialMemberPrint();
-		
-		
-		
-		
+		/*	arr[0].memberPrint();
+			arr[1].memberPrint();
+			SpecialMember sp = (SpecialMember)arr[1];
+			sp.memberPrint();
+			
+			
+			
+			*/
 	}
 
 }

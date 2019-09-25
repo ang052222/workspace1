@@ -58,8 +58,8 @@ public class GeneralMember {
 		this.rentalVideo = rentalVideo;
 	}
 
-
-	public void generalMemberPrint() {
+	// 회원 정보 출력 메소드
+	public void memberPrint() {  // 오버라이딩
 		
 		System.out.println();
 		System.out.println("★★★모든 회원정보 출력 메소드★★★");
