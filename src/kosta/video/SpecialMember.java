@@ -24,15 +24,13 @@ public class SpecialMember extends GeneralMember {
 		this.bpoint = bpoint;
 	}
 
-
+	@Override
 	// 회원 정보 출력 메소드
 	public void memberPrint() { // 오버라이딩
 		
 		System.out.println();
 		super.memberPrint();
-		System.out.println("●●●스페셜멤버 출력 메소드●●●●●");
 		System.out.println("회원의 보너스 포인트 적립 : " + bpoint);
-		System.out.println("●●●스페셜멤버 출력 메소드●●●●●");
 		
 		
 	}

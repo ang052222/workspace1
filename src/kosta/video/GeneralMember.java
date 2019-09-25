@@ -70,7 +70,6 @@ public class GeneralMember {
 		System.out.println("회원이 대여한 비디오 제목 :" + rentalVideo.getVideoName());
 		System.out.println("회원이 대여한 비디오 주인공 : " + rentalVideo.getVideoActor());
 		
-		System.out.println("★★★모든 회원정보 출력 메소드★★★여기까지");
 		
 		
 	}
