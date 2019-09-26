@@ -1,15 +1,15 @@
 package kosta.phone;
 
-public class Universe extends PhoneInfo {
+public class University extends PhoneInfo {
 
 	private String major;
 	private int year;
 	
-	public Universe() {
+	public University() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Universe(String name, String phoneNo, String birth, String major, int year) {
+	public University(String name, String phoneNo, String birth, String major, int year) {
 		super(name, phoneNo, birth);
 		this.major = major;
 		this.year = year;
