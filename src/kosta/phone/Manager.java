@@ -61,7 +61,7 @@ public class Manager {
 		
 		
 		
-		System.out.println();
+		
 		System.out.print("이름을 입력 하세요 : ");
 		String name = DataInput.sc.next();
 		
