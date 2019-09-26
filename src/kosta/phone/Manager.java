@@ -20,48 +20,187 @@ public class Manager {
 	
 	
 	
+	
+	
+	// 전화번호 추가 선택지
+	public void selectAddPhoneInfo() {
+		
+		System.out.println("************************");
+		System.out.println("분류하실 그룹을 선택하세요.");
+		System.out.println("1. 일반");
+		System.out.println("2. 동창");
+		System.out.println("3. 회사 ");
+		System.out.println("************************");
+		System.out.print("선택 : ");
+		int i = DataInput.sc.nextInt();
+		
+		switch (i) {
+		case 1: addPhoneInfo();
+			
+			break;
+		case 2:
+				addUniverse();
+			break;
+		case 3:
+				addCompany();
+			break;
+
+		default:
+			break;
+		}
+		
+		
+	}
+	
 	//전화번호 추가
 	public void addPhoneInfo() {
 		
 		
 		
 		
-		
+		System.out.println();
 		System.out.print("이름을 입력 하세요 : ");
-		String name = DataInput.sc.nextLine();
+		String name = DataInput.sc.next();
 		
 		System.out.print("전화번호를 입력 하세요 : ");
-		String phoneNo = DataInput.sc.nextLine();
+		String phoneNo = DataInput.sc.next();
 		
 		System.out.print("생일을 입력 하세요 : ");
-		String birth = DataInput.sc.nextLine();
+		String birth = DataInput.sc.next();
+		
 		
 		System.out.println();
 		System.out.println();
-		
 		
 		
 		arr[count++] = new PhoneInfo(name, phoneNo, birth);
 		
 		
 		
-		/*for(int i = 0 ; i < arr.length ; i++) {
+		
+		/*for(int i = 0 ; i < 1 ; i++) {
 			arr[i] = new PhoneInfo(name, phoneNo, birth);
+			
+			System.out.println(arr[i].getName());
+			System.out.println(arr[i].getPhoneNo());
+			System.out.println(arr[i].getBirth());
 		}*/
-		
-		
 		
 		
 	}
 	
+	// 동창 추가
+	public void addUniverse() {
+		
+		
+		System.out.println();
+		System.out.print("이름을 입력 하세요 : ");
+		String name = DataInput.sc.next();
+		
+		System.out.print("전화번호를 입력 하세요 : ");
+		String phoneNo = DataInput.sc.next();
+		
+		System.out.print("생일을 입력 하세요 : ");
+		String birth = DataInput.sc.next();
+		
+		System.out.print("전공을 입력 하세요 : ");
+		String major = DataInput.sc.next();
+		
+		System.out.print("학번을 입력하세요 :");
+		int year = DataInput.sc.nextInt();
+		
+		
+		
+		System.out.println();
+		System.out.println();
+		
+		
+		arr[count++] = new Universe(name, phoneNo, birth, major, year);
+		
+		
+		/*for(int i = 0 ; i < 2 ; i++) {
+			
+			
+			System.out.println(arr[i].getName());
+			System.out.println(arr[i].getPhoneNo());
+			System.out.println(arr[i].getBirth());
+		}*/
+		
+		
+	}
+	
+	// 회사동료 추가
+		public void addCompany() {
+			
+			System.out.println();
+			System.out.print("이름을 입력 하세요 : ");
+			String name = DataInput.sc.next();
+			
+			System.out.print("전화번호를 입력 하세요 : ");
+			String phoneNo = DataInput.sc.next();
+			
+			System.out.print("생일을 입력 하세요 : ");
+			String birth = DataInput.sc.next();
+			
+			System.out.print("부서를 입력 하세요 : ");
+			String dept = DataInput.sc.next();
+			
+			System.out.print("직위를 입력 하세요 : ");
+			String position = DataInput.sc.next();
+			
+			
+			System.out.println();
+			System.out.println();
+			
+			
+			arr[count++] = new Company(name, phoneNo, birth, dept, position);
+			
+			
+			
+			
+		}
+	
+		
+		
+		
+		
+		
+	// 전체목록 선택지
+	public void listSelect() {
+		
+		System.out.println("************************");
+		System.out.println("전체보기 할 그룹을 선택하세요.");
+		System.out.println("1. 일반");
+		System.out.println("2. 동창");
+		System.out.println("3. 회사 ");
+		System.out.println("************************");
+		System.out.print("선택 : ");
+		int i = DataInput.sc.nextInt();
+		
+		switch (i) {
+		case 1: listPhoneInfo();
+			
+			break;
+		case 2:
+				listUniverse();
+			break;
+		case 3:
+				listCompany();
+			break;
+
+		default:
+			break;
+		}
+		
+	}
 	
 	// 전체목록 출력
 	public void listPhoneInfo() {
 		
-		
 		System.out.println("********************************");
 		System.out.println("전화번호부 출력");
-		System.out.println("이름 \t 전화번호 \t 생일");
+		System.out.println("********************************");
+		
 		
 		
 		
@@ -69,12 +208,55 @@ public class Manager {
 		
 		for(int i = 0 ; i < count ; i++) {
 			arr[i].show();
+			System.out.println("********************************");
 		}
+		
+		
 		
 	}
 	
+	// 대학동기 목록 출력
+	public void listUniverse() {
+		
+		System.out.println("********************************");
+		System.out.println("전화번호부 출력");
+		
+		for(int i = 0 ; i < count ; i++) {
+			
+			if(arr[i] instanceof Universe) {
+			
+				arr[i].show();
+				System.out.println("********************************");
+			}
+			
+		}
+		
+		
+		
+		
+	}
+	
+	// 회사동기 목록 출력
+	public void listCompany() {
+		
+		System.out.println("********************************");
+		System.out.println("전화번호부 출력");
+		
+		
+		for(int i = 0 ; i < count ; i++) {
+			if(arr[i] instanceof Company) {
+				
+				arr[i].show();
+				System.out.println("********************************");
+			}
+		}
+		
+		
+	}
+
 	
 	
+	// 전체 검색
 	public void searchPhoneInfo() {
 		
 		
@@ -108,7 +290,8 @@ public class Manager {
 		
 		System.out.println();
 		System.out.println("********************************");
-		System.out.println("이름 \t 전화번호 \t 생일");
+		System.out.println("검색결과");
+		System.out.println("********************************");
 		
 		for(int i = 0 ; i < count ; i++) {
 			
