@@ -18,16 +18,21 @@ public class Main {
 		
 		for(int i = 0 ; i < arr.length ; i++) {  // 오버라이딩으로 가능하다. 
 			arr[i].memberPrint();
+		
+			if(arr[i] instanceof SpecialMember) {
+				SpecialMember sm = (SpecialMember)arr[i];
+				sm.printBonus();
+			}
 			
 		}
-			
+		
+		//SpecialMember sp = ((SpecialMember) arr[1]);
+		//sp.printBonus();
 		
 		/*	arr[0].memberPrint();
 			arr[1].memberPrint();
 			SpecialMember sp = (SpecialMember)arr[1];
 			sp.memberPrint();
-			
-			
 			
 			*/
 	}
