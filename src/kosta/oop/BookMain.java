@@ -16,6 +16,17 @@ public class BookMain {
 		
 		
 		
+		String str = "Hello, Java";
+		System.out.println(str);
+		
+		
+		Integer it = new Integer(100);
+		System.out.println(it);
+		
+		
+		
+		
+		
 	}
 	
 	
