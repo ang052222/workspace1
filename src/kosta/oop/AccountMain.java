@@ -13,9 +13,13 @@ public class AccountMain {
 		System.out.println(obj);
 		
 		if(obj.equals(obj2)) {
+			
 			System.out.println("같음");
+			
 		}else {
+			
 			System.out.println("다름");
+			
 		}
 		
 		
