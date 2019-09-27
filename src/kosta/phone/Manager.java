@@ -21,7 +21,6 @@ public class Manager {
 	
 	
 	
-	
 	// 전화번호 추가 선택지
 	public void selectAddPhoneInfo() {
 		
@@ -33,6 +32,7 @@ public class Manager {
 		System.out.println("************************");
 		System.out.print("선택 : ");
 		int i = DataInput.sc.nextInt();
+		
 		
 		switch (i) {
 		case 1: addPhoneInfo();
@@ -50,6 +50,9 @@ public class Manager {
 		}
 		
 		
+		
+		
+		
 	}
 	
 	//전화번호 추가
@@ -58,7 +61,7 @@ public class Manager {
 		
 		
 		
-		System.out.println();
+		
 		System.out.print("이름을 입력 하세요 : ");
 		String name = DataInput.sc.next();
 		
@@ -67,6 +70,8 @@ public class Manager {
 		
 		System.out.print("생일을 입력 하세요 : ");
 		String birth = DataInput.sc.next();
+		
+	
 		
 		
 		

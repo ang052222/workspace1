@@ -23,12 +23,12 @@ public class Main {
 			
 			
 			switch (menu) {
-			case "1": //mg.addPhoneInfo();
+			case "1": 
 						mg.selectAddPhoneInfo();
 				
 				break;
 				
-			case "2": //mg.listPhoneInfo();
+			case "2": 
 						mg.listSelect();
 				
 				break;
