@@ -3,7 +3,7 @@ package kosta.phone;
 public class Manager {
 	
 	
-	DataInput di = new DataInput();
+	//DataInput di = new DataInput();
 	
 	
 	// 배열선언, 생성

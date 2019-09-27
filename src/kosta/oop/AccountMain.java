@@ -7,11 +7,20 @@ public class AccountMain {
 		Account obj, obj2, obj3; 
 		
 		obj = new Account("1111-1111", "홍길동", 2000 );  // obj는 레퍼런스 변수이다. Account는 클래스타입
-		obj2 = new Account("2222-2222", "박길동", 50000);
+		obj2 = new Account("1111-1111", "홍길동", 2000);
 		obj3 = new Account();
 		
 		System.out.println(obj);
 		
+		if(obj.equals(obj2)) {
+			System.out.println("같음");
+		}else {
+			System.out.println("다름");
+		}
+		
+		
+		System.out.println();
+		System.out.println();
 		
 		// 초기화
 		/*obj.accountNo = "7535-02-01285441";

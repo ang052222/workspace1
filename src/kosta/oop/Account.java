@@ -65,6 +65,18 @@ public class Account {
 	}
 	
 	
+	@Override
+	public boolean equals(Object obj) {
+		
+		Account account = (Account)obj;
+		
+		if(accountNo.equals(account.accountNo)) {
+			return true;
+		}else {
+			return false;
+			}
+	}
+	
 	
 	
 	
