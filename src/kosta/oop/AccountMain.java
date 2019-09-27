@@ -10,6 +10,7 @@ public class AccountMain {
 		obj2 = new Account("2222-2222", "박길동", 50000);
 		obj3 = new Account();
 		
+		System.out.println(obj);
 		
 		
 		// 초기화

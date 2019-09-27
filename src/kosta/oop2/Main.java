@@ -32,7 +32,7 @@ public class Main {
 			ps[i].doo();
 		}
 		
-		
+		System.out.println(p);  // sysout에서는 .toString을 생략할 수 있다. 자동으로 이클립스가 미루어 짐작함
 
 	}
 

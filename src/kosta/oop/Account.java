@@ -4,7 +4,6 @@ public class Account {
 
 	// 공통된 데이터 구조
 	// 계좌번호, 계좌주, 잔액 : 상태 → 멤버변수(field, 속성) 멤버변수는 초기화를 할 필요가 없다. 
-	
 	String accountNo;
 	String ownerName;
 	int balance;
@@ -60,7 +59,10 @@ public class Account {
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return "Account [accountNo=" + accountNo + ", ownerName=" + ownerName + ", balance=" + balance + "]";
+	}
 	
 	
 	
