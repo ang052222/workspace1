@@ -13,6 +13,19 @@ public class Main {
 					   new Person("홍길동", wk), 
 					   new Person("박길동", st)};
 		
+		Role role = new Role() {
+			
+			@Override
+			void doIt() {
+				// 익명 클래스
+				System.out.println("놀고 싶어요!!!!!!!!!!!!!!!!!!!!!!!");
+				
+			}
+		};
+		
+		
+		Person p = new Person("홍길동", role);
+		p.doo();
 		
 		
 		for(int i = 0 ; i < ps.length ; i++) {

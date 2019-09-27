@@ -19,7 +19,7 @@ public class Main {
 			System.out.println("4. 종료");
 			System.out.println();
 			System.out.print("메뉴입력 : ");
-			String menu = di.sc.nextLine();
+			String menu = di.sc.next();
 			
 			
 			switch (menu) {

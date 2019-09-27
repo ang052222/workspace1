@@ -39,7 +39,7 @@ public class Manager {
 			
 			break;
 		case 2:
-				addUniverse();
+				addUniversity();
 			break;
 		case 3:
 				addCompany();
@@ -69,6 +69,8 @@ public class Manager {
 		String birth = DataInput.sc.next();
 		
 		
+		
+		
 		System.out.println();
 		System.out.println();
 		
@@ -90,7 +92,7 @@ public class Manager {
 	}
 	
 	// 동창 추가
-	public void addUniverse() {
+	public void addUniversity() {
 		
 		
 		System.out.println();
@@ -115,7 +117,7 @@ public class Manager {
 		System.out.println();
 		
 		
-		arr[count++] = new Universe(name, phoneNo, birth, major, year);
+		arr[count++] = new University(name, phoneNo, birth, major, year);
 		
 		
 		/*for(int i = 0 ; i < 2 ; i++) {
@@ -182,7 +184,7 @@ public class Manager {
 			
 			break;
 		case 2:
-				listUniverse();
+				listUniversity();
 			break;
 		case 3:
 				listCompany();
@@ -216,14 +218,14 @@ public class Manager {
 	}
 	
 	// 대학동기 목록 출력
-	public void listUniverse() {
+	public void listUniversity() {
 		
 		System.out.println("********************************");
 		System.out.println("전화번호부 출력");
 		
 		for(int i = 0 ; i < count ; i++) {
 			
-			if(arr[i] instanceof Universe) {
+			if(arr[i] instanceof University) {
 			
 				arr[i].show();
 				System.out.println("********************************");
