@@ -1,20 +1,29 @@
 package kosta.phone;
 
+import java.util.ArrayList;
+
 public class Manager {
 	
 	
 	//DataInput di = new DataInput();
 	
 	
+
 	// 배열선언, 생성
-	PhoneInfo arr[];
+	//PhoneInfo arr[];
 	static int count;
+	
+	/*ArrayList<PhoneInfo> arr = new ArrayList<PhoneInfo>();
+	ArrayList<University> arr1 = new ArrayList<University>();
+	ArrayList<Company> arr2 = new ArrayList<Company>();*/
+	
+	ArrayList arr = new ArrayList();
 	
 	
 	
 	public Manager() {
 		
-		arr = new PhoneInfo[10];
+		//arr = new PhoneInfo[10];
 	}
 	
 	
@@ -80,8 +89,8 @@ public class Manager {
 		System.out.println();
 		
 		
-		arr[count++] = new PhoneInfo(name, phoneNo, birth);
-		
+		//arr[count++] = new PhoneInfo(name, phoneNo, birth);
+		arr.add(count, new PhoneInfo(name, phoneNo, birth));
 		
 		
 		
@@ -122,8 +131,8 @@ public class Manager {
 		System.out.println();
 		
 		
-		arr[count++] = new University(name, phoneNo, birth, major, year);
-		
+		//arr[count++] = new University(name, phoneNo, birth, major, year);
+		arr.add(count, new University(name, phoneNo, birth, major, year));
 		
 		/*for(int i = 0 ; i < 2 ; i++) {
 			
@@ -160,8 +169,8 @@ public class Manager {
 			System.out.println();
 			
 			
-			arr[count++] = new Company(name, phoneNo, birth, dept, position);
-			
+			//arr[count++] = new Company(name, phoneNo, birth, dept, position);
+			arr.add(count, new Company(name, phoneNo, birth, dept, position));
 			
 			
 			
@@ -213,10 +222,15 @@ public class Manager {
 		
 		// 배열안에 있는 phoneinfo객체의 show() 메소드를 출력
 		
-		for(int i = 0 ; i < count ; i++) {
-			arr[i].show();
+		/*for(int i = 0 ; i < arr.size() ; i++) {
+			//arr[i].show();
+			arr.get(i);
 			System.out.println("********************************");
-		}
+		}*/
+		
+		/*for(int i = 0 ; i < arr.size() ; i++) {
+			arr.get(i).
+		}*/
 		
 		
 		
@@ -228,7 +242,7 @@ public class Manager {
 		System.out.println("********************************");
 		System.out.println("전화번호부 출력");
 		
-		for(int i = 0 ; i < count ; i++) {
+		/*for(int i = 0 ; i < count ; i++) {
 			
 			if(arr[i] instanceof University) {
 			
@@ -236,7 +250,21 @@ public class Manager {
 				System.out.println("********************************");
 			}
 			
-		}
+		}*/
+		
+		/*for(int i = 0 ; i < arr.size() ; i++) {
+			
+			if(arr.contains(University.class)) {
+				
+				arr
+			}
+			
+			
+		}*/
+		
+		/*for(PhoneInfo i : arr) {
+			i.show();
+		}*/
 		
 		
 		
@@ -250,14 +278,17 @@ public class Manager {
 		System.out.println("전화번호부 출력");
 		
 		
-		for(int i = 0 ; i < count ; i++) {
+		/*for(int i = 0 ; i < count ; i++) {
 			if(arr[i] instanceof Company) {
 				
 				arr[i].show();
 				System.out.println("********************************");
 			}
-		}
+		}*/
 		
+		/*for(PhoneInfo i : arr) {
+			i.show();
+		}*/
 		
 	}
 
@@ -300,7 +331,7 @@ public class Manager {
 		System.out.println("검색결과");
 		System.out.println("********************************");
 		
-		for(int i = 0 ; i < count ; i++) {
+		/*for(int i = 0 ; i < count ; i++) {
 			
 			 if(text.equals(arr[i].getName()) ) {
 				 arr[i].show();
@@ -308,7 +339,18 @@ public class Manager {
 				 idx = i;
 			 }
 					
-			}
+			}*/
+		
+		/*
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			 if(text.equals(arr.get(index)) ) {
+				 arr[i].show();
+				 
+				 idx = i;
+			 }
+					
+			}*/
 		
 		
 		if(idx == -1) {
