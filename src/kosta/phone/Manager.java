@@ -11,7 +11,7 @@ public class Manager {
 
 	// 배열선언, 생성
 	//PhoneInfo arr[];
-	static int count;
+	//static int count;
 	
 	/*ArrayList<PhoneInfo> arr = new ArrayList<PhoneInfo>();
 	ArrayList<University> arr1 = new ArrayList<University>();
@@ -90,7 +90,7 @@ public class Manager {
 		
 		
 		//arr[count++] = new PhoneInfo(name, phoneNo, birth);
-		arr.add(count, new PhoneInfo(name, phoneNo, birth));
+		arr.add(new PhoneInfo(name, phoneNo, birth));
 		
 		
 		
@@ -132,7 +132,7 @@ public class Manager {
 		
 		
 		//arr[count++] = new University(name, phoneNo, birth, major, year);
-		arr.add(count, new University(name, phoneNo, birth, major, year));
+		arr.add(new University(name, phoneNo, birth, major, year));
 		
 		/*for(int i = 0 ; i < 2 ; i++) {
 			
@@ -170,7 +170,7 @@ public class Manager {
 			
 			
 			//arr[count++] = new Company(name, phoneNo, birth, dept, position);
-			arr.add(count, new Company(name, phoneNo, birth, dept, position));
+			arr.add(new Company(name, phoneNo, birth, dept, position));
 			
 			
 			
@@ -229,9 +229,9 @@ public class Manager {
 		}*/
 		
 		/*for(int i = 0 ; i < arr.size() ; i++) {
-			arr.get(i).
-		}*/
-		
+			arr.contains(arr.);
+		}
+		*/
 		
 		
 	}
