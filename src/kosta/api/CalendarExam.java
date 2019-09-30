@@ -50,6 +50,21 @@ public class CalendarExam {
 		
 		String str = df.format(cd.getTime());  // Calendar를 Date 객체로 변환시켜주어야 한다. 
 		 System.out.println(str);  // 7월 31일에 만나면 이 날이 100일이 되는 날이 된다. 
+		 
+		 
+		 
+		 
+		 
+		 // 매년의 크리스마스 요일을 구해라
+		 char[] week = {'일', '월', '화', '수', '목', '금', '토'};
+		 
+		 
+		 for(int i = 2019 ; i < 2029 ; i++) {
+			 cd.set(i, 11, 25);  
+			 char c = week[cd.get(Calendar.DAY_OF_WEEK) -1];	// 요일은 1부터 시작한다. 그렇기 떄문에 -1을 해준다. 배열의 인덱스는 0부터 시작하기 떄문이다.
+			 System.out.println(i + "년의 크리스마스 요일은 " + c +"요일 입니다.");
+			 
+		 }
 		
 		
 		
