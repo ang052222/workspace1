@@ -32,7 +32,7 @@ public class OrderExam {
 			System.out.println("*******************");
 			System.out.println("1. 주문 ");
 			System.out.println("2. 주문 처리 ");
-			System.out.println();
+			System.out.println("3. 종료하세요");
 			System.out.println("*******************");
 			System.out.print("번호를 선택해 주세요 : ");
 			num = sc.next();
@@ -50,32 +50,38 @@ public class OrderExam {
 				
 			case "2":
 				
-				while(!order.isEmpty()) {
-					
-					Order str = order.poll();
-					str.show();
-					
-				}
+			for(int i = 0; i < order.size() ; i++) {
+				
+				order.get(i).show();
+				
+			}
 				System.out.println();
 				System.out.println("첫번째 주문을 처리하시겠습니까?");
+				System.out.println("1. 네");
+				System.out.println("2. 아니오");
 				String yn = sc.next();
 				
-				if(yn.equals("y")) {
-					order.removeFirst();
+				if(yn.equals("1")) {
+					order.poll();
 					
-					while(!order.isEmpty()) {
+					for(int i = 0; i < order.size() ; i++) {
 						
-						Order str1 = order.poll();
-						str1.show();
+						order.get(i).show();
 						
 					}
 					
+				}else {
+					for(int i = 0; i < order.size() ; i++) {
+						
+						order.get(i).show();
+						
+					}
 				}
 				
 				
 				break;
 			case "3":
-				
+					System.out.println("가게 Close!");
 				return;
 
 			}
