@@ -89,17 +89,6 @@ public class Manager {
 		//arr[count++] = new PhoneInfo(name, phoneNo, birth);
 		arr.add(new PhoneInfo(name, phoneNo, birth));
 		
-		
-		
-		/*for(int i = 0 ; i < 1 ; i++) {
-			arr[i] = new PhoneInfo(name, phoneNo, birth);
-			
-			System.out.println(arr[i].getName());
-			System.out.println(arr[i].getPhoneNo());
-			System.out.println(arr[i].getBirth());
-		}*/
-		
-		
 	}
 	
 	// 동창 추가
@@ -131,13 +120,7 @@ public class Manager {
 		//arr[count++] = new University(name, phoneNo, birth, major, year);
 		arr.add(new University(name, phoneNo, birth, major, year));
 		
-		/*for(int i = 0 ; i < 2 ; i++) {
-			
-			
-			System.out.println(arr[i].getName());
-			System.out.println(arr[i].getPhoneNo());
-			System.out.println(arr[i].getBirth());
-		}*/
+		
 		
 		
 	}
@@ -225,11 +208,9 @@ public class Manager {
 			System.out.println("********************************");
 		}*/
 		
-		/*for(int i = 0 ; i < arr.size() ; i++) {
-			arr.contains(arr.);
-		}
-		*/
+		
 		for(int i = 0 ; i < arr.size() ; i++) {
+			
 			
 			arr.get(i).show();
 			System.out.println("********************************");
@@ -256,22 +237,16 @@ public class Manager {
 			
 		}*/
 		
-		/*for(int i = 0 ; i < arr.size() ; i++) {
-			
-			if(arr.contains(University.class)) {
-				
-				arr
-			}
-			
-			
-		}*/
+		
 		
 		for(int i = 0 ; i < arr.size() ; i++) {
 			
+			if(arr.get(i) instanceof University) {
+		
 				arr.get(i).show();
 				System.out.println("********************************");
 			
-			
+			}
 		}
 		
 		
@@ -296,17 +271,17 @@ public class Manager {
 			}
 		}*/
 		
-		/*for(PhoneInfo i : arr) {
-			i.show();
-		}*/
+		
 		
 		for(int i = 0 ; i < arr.size() ; i++) {
 			
-			arr.get(i).show();
-			System.out.println("********************************");
+			if(arr.get(i) instanceof Company) {
 		
-		
-	}
+				arr.get(i).show();
+				System.out.println("********************************");
+			
+			}
+		}
 		
 	}
 
