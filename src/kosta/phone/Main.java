@@ -16,7 +16,8 @@ public class Main {
 			System.out.println("1. 추가");
 			System.out.println("2. 전체출력");
 			System.out.println("3. 검색");
-			System.out.println("4. 종료");
+			System.out.println("4. 정렬");
+			System.out.println("5. 종료");
 			System.out.println();
 			System.out.print("메뉴입력 : ");
 			String menu = di.sc.next();
@@ -33,12 +34,16 @@ public class Main {
 				
 				break;
 				
-			case "3": mg.searchPhoneInfo();
-			
+			case "3": 
+						mg.searchPhoneInfo();
 				break;
 				
 			case "4":
-				System.out.println("프로그램 종료");
+						mg.selectSort();
+				break;
+				
+			case "5":
+						System.out.println("프로그램 종료");
 				return;
 
 			}

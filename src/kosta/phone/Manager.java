@@ -1,6 +1,9 @@
 package kosta.phone;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class Manager {
 	
@@ -37,22 +40,21 @@ public class Manager {
 		System.out.println("3. 회사 ");
 		System.out.println("************************");
 		System.out.print("선택 : ");
-		int i = DataInput.sc.nextInt();
+		String i = DataInput.sc.next();
 		
 		
 		switch (i) {
-		case 1: addPhoneInfo();
+		case "1": addPhoneInfo();
 			
 			break;
-		case 2:
+		case "2":
 				addUniversity();
 			break;
-		case 3:
+		case "3":
 				addCompany();
 			break;
 
-		default:
-			break;
+		
 		}
 		
 		
@@ -171,21 +173,20 @@ public class Manager {
 		System.out.println("3. 회사 ");
 		System.out.println("************************");
 		System.out.print("선택 : ");
-		int i = DataInput.sc.nextInt();
+		String i = DataInput.sc.next();
 		
 		switch (i) {
-		case 1: listPhoneInfo();
+		case "1": listPhoneInfo();
 			
 			break;
-		case 2:
+		case "2":
 				listUniversity();
 			break;
-		case 3:
+		case "3":
 				listCompany();
 			break;
 
-		default:
-			break;
+	
 		}
 		
 	}
@@ -216,7 +217,7 @@ public class Manager {
 			System.out.println("********************************");
 		
 		
-	}
+		}
 		
 		
 	}
@@ -356,6 +357,106 @@ public class Manager {
 		
 		
 	}
+
+
+	// 정렬 선택지
+	public void selectSort() {
+		
+		System.out.println("************************");
+		System.out.println("정렬을 선택하세요.");
+		System.out.println("1. 내림차순");
+		System.out.println("2. 오름차순");
+		System.out.println("************************");
+		System.out.print("선택 : ");
+		String i = DataInput.sc.next();
+		
+		switch (i) {
+		case "1":	sortDes();
+			
+			break;
+		case "2":
+					sortAsc();
+			break;
+		
+		}
+		
+	}
+
+
+
+
+	// 이름으로 오름차순
+	public void sortAsc() {
+		
+		
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		}
+		
+		System.out.println("********************************");
+		System.out.println("오름차순 출력");
+		System.out.println("********************************");
+		
+		
+		Collections.sort(arr);
+		
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		}
+		
+		//System.out.println(arr,arr.ab);
+		
+		
+		
+	}
+
+
+
+
+	// 이름으로 내림차순
+	public void sortDes() {
+		
+		
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		}
+		
+		System.out.println("********************************");
+		System.out.println("내림차순 출력");
+		System.out.println("********************************");
+		
+		//Collections.sort(arr, new PhoneDesc());
+		Collections.sort(arr, new PhoneInfo() );
+		
+		
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+
+
+
+
+	
 	
 
 }

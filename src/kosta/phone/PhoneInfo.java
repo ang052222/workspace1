@@ -1,6 +1,8 @@
 package kosta.phone;
 
-public class PhoneInfo {
+import java.util.Comparator;
+
+public class PhoneInfo implements Comparable<PhoneInfo>, Comparator<PhoneInfo>{
 	// 한 사람에 대한 전화번호 내역
 	// 상태 ( name ,  phoneNo, birth)
 	// 기능 (show : 전화번호부를 출력 )
@@ -50,9 +52,39 @@ public class PhoneInfo {
 		System.out.println("생일 : " + birth);
 		
 	}
+
+	@Override
+	public int compareTo(PhoneInfo p) {
+		// 최초의 정렬 기준
+		
+		if(this.name.compareTo(p.getName()) > 0) {
+			
+			return 1;
+			
+		}else if(this.name.compareTo(p.getName()) < 0) {
+		
+			return -1;
+		}
+		
+		
+		return 0;
+	}
+
+	@Override
+	public int compare(PhoneInfo o1, PhoneInfo o2) {
+		// 이름 내림차순으로
+		
+		if(o1.getName().compareTo(o2.getName()) < 0) {
+			return 1;
+		}else if(o1.getName().compareTo(o2.getName()) > 0) {
+			return -1;
+		}
+			return 0;
+	}
+
+
 	
-	
-	
+
 	
 	
 
