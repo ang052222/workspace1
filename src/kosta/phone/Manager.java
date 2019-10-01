@@ -13,11 +13,8 @@ public class Manager {
 	//PhoneInfo arr[];
 	//static int count;
 	
-	/*ArrayList<PhoneInfo> arr = new ArrayList<PhoneInfo>();
-	ArrayList<University> arr1 = new ArrayList<University>();
-	ArrayList<Company> arr2 = new ArrayList<Company>();*/
+	ArrayList<PhoneInfo> arr = new ArrayList<PhoneInfo>();
 	
-	ArrayList arr = new ArrayList();
 	
 	
 	
@@ -232,6 +229,13 @@ public class Manager {
 			arr.contains(arr.);
 		}
 		*/
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		
+	}
 		
 		
 	}
@@ -262,9 +266,15 @@ public class Manager {
 			
 		}*/
 		
-		/*for(PhoneInfo i : arr) {
-			i.show();
-		}*/
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+				arr.get(i).show();
+				System.out.println("********************************");
+			
+			
+		}
+		
+		
 		
 		
 		
@@ -289,6 +299,14 @@ public class Manager {
 		/*for(PhoneInfo i : arr) {
 			i.show();
 		}*/
+		
+		for(int i = 0 ; i < arr.size() ; i++) {
+			
+			arr.get(i).show();
+			System.out.println("********************************");
+		
+		
+	}
 		
 	}
 
