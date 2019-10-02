@@ -13,6 +13,9 @@ public class FileReaderExam {
 		try {
 			reader = new FileReader("poem.txt");	// 빨대 하나 꼽았다. 
 			
+			reader.read(arr);	// 아스키코드 (정수형 값)이 들어온다. 
+			System.out.println(arr);
+			
 			/*while (true) {
 				int data = reader.read();
 				
@@ -25,24 +28,7 @@ public class FileReaderExam {
 				
 			}*/
 			
-			
-			reader.read(arr);
-			System.out.println(arr);
-			
-			
 				
-							
-				
-				System.out.print(String.valueOf(arr));
-				
-				
-				
-				
-			
-			
-			
-			
-			
 			
 		} catch (Exception e) {
 			e.printStackTrace(); 	// 몇 번째 라인에 났는지 알려준다. 
