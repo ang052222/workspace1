@@ -74,9 +74,9 @@ public class CopyUtil {
 			fis = new FileInputStream(source);
 			fos = new FileOutputStream(dest);
 			
-			int i = 0;
 			
-			//while((i = fis))
+			
+		
 			
 			
 		} catch (Exception e) {
