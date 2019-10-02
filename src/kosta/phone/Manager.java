@@ -335,16 +335,16 @@ public class Manager {
 					
 			}*/
 		
-		/*
+		
 		for(int i = 0 ; i < arr.size() ; i++) {
 			
-			 if(text.equals(arr.get(index)) ) {
-				 arr[i].show();
+			 if(text.equals(arr.get(i).getName()) ) {
+				 arr.get(i).show();
 				 
 				 idx = i;
 			 }
 					
-			}*/
+			}
 		
 		
 		if(idx == -1) {
