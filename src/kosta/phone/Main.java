@@ -17,7 +17,9 @@ public class Main {
 			System.out.println("2. 전체출력");
 			System.out.println("3. 검색");
 			System.out.println("4. 정렬");
-			System.out.println("5. 종료");
+			System.out.println("5. 저장"); // refresh해야한다.
+			System.out.println("6. 로딩");
+			System.out.println("7. 종료");
 			System.out.println();
 			System.out.print("메뉴입력 : ");
 			String menu = di.sc.next();
@@ -43,6 +45,19 @@ public class Main {
 				break;
 				
 			case "5":
+						mg.saveFile();
+				break;
+				
+			case "6":
+						mg.arr = null;
+						mg.openFile();
+						
+						for(PhoneInfo i : mg.arr) {
+							i.show();
+						}
+				break;
+				
+			case "7":
 						System.out.println("프로그램 종료");
 				return;
 

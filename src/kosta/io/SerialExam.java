@@ -69,7 +69,7 @@ public class SerialExam {
 		se.m = null;	// 죽여버려야한다. 어떤 Member객체인지 모르기때문에
 		se.read();
 		
-		System.out.println(se.m);
+		System.out.println(se.m); 
 		
 		
 		

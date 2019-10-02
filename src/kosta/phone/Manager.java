@@ -1,16 +1,14 @@
 package kosta.phone;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
-public class Manager {
-	
-	
-	//DataInput di = new DataInput();
-	
-	
+public class Manager /*implements Serializable*/{
 
 	// 배열선언, 생성
 	//PhoneInfo arr[];
@@ -19,14 +17,9 @@ public class Manager {
 	ArrayList<PhoneInfo> arr = new ArrayList<PhoneInfo>();
 	
 	
-	
-	
 	public Manager() {
-		
 		//arr = new PhoneInfo[10];
 	}
-	
-	
 	
 	
 	
@@ -58,16 +51,10 @@ public class Manager {
 		}
 		
 		
-		
-		
-		
 	}
 	
 	//전화번호 추가
 	public void addPhoneInfo() {
-		
-		
-		
 		
 		
 		System.out.print("이름을 입력 하세요 : ");
@@ -78,10 +65,6 @@ public class Manager {
 		
 		System.out.print("생일을 입력 하세요 : ");
 		String birth = DataInput.sc.next();
-		
-	
-		
-		
 		
 		
 		System.out.println();
@@ -97,7 +80,6 @@ public class Manager {
 	public void addUniversity() {
 		
 		
-		System.out.println();
 		System.out.print("이름을 입력 하세요 : ");
 		String name = DataInput.sc.next();
 		
@@ -123,36 +105,33 @@ public class Manager {
 		arr.add(new University(name, phoneNo, birth, major, year));
 		
 		
-		
-		
 	}
 	
 	// 회사동료 추가
-		public void addCompany() {
+	public void addCompany() {
 			
-			System.out.println();
-			System.out.print("이름을 입력 하세요 : ");
-			String name = DataInput.sc.next();
+		System.out.print("이름을 입력 하세요 : ");
+		String name = DataInput.sc.next();
 			
-			System.out.print("전화번호를 입력 하세요 : ");
-			String phoneNo = DataInput.sc.next();
+		System.out.print("전화번호를 입력 하세요 : ");
+		String phoneNo = DataInput.sc.next();
 			
-			System.out.print("생일을 입력 하세요 : ");
-			String birth = DataInput.sc.next();
+		System.out.print("생일을 입력 하세요 : ");
+		String birth = DataInput.sc.next();
 			
-			System.out.print("부서를 입력 하세요 : ");
-			String dept = DataInput.sc.next();
+		System.out.print("부서를 입력 하세요 : ");
+		String dept = DataInput.sc.next();
 			
-			System.out.print("직위를 입력 하세요 : ");
-			String position = DataInput.sc.next();
-			
-			
-			System.out.println();
-			System.out.println();
+		System.out.print("직위를 입력 하세요 : ");
+		String position = DataInput.sc.next();
 			
 			
-			//arr[count++] = new Company(name, phoneNo, birth, dept, position);
-			arr.add(new Company(name, phoneNo, birth, dept, position));
+		System.out.println();
+		System.out.println();
+			
+			
+		//arr[count++] = new Company(name, phoneNo, birth, dept, position);
+		arr.add(new Company(name, phoneNo, birth, dept, position));
 			
 			
 			
@@ -185,7 +164,6 @@ public class Manager {
 		case "3":
 				listCompany();
 			break;
-
 	
 		}
 		
@@ -200,7 +178,6 @@ public class Manager {
 		
 		
 		
-		
 		// 배열안에 있는 phoneinfo객체의 show() 메소드를 출력
 		
 		/*for(int i = 0 ; i < arr.size() ; i++) {
@@ -212,10 +189,8 @@ public class Manager {
 		
 		for(int i = 0 ; i < arr.size() ; i++) {
 			
-			
 			arr.get(i).show();
 			System.out.println("********************************");
-		
 		
 		}
 		
@@ -237,7 +212,6 @@ public class Manager {
 			}
 			
 		}*/
-		
 		
 		
 		for(int i = 0 ; i < arr.size() ; i++) {
@@ -271,7 +245,6 @@ public class Manager {
 				System.out.println("********************************");
 			}
 		}*/
-		
 		
 		
 		for(int i = 0 ; i < arr.size() ; i++) {
@@ -411,8 +384,6 @@ public class Manager {
 		}
 		
 		
-		
-		
 	}
 
 
@@ -445,11 +416,60 @@ public class Manager {
 		}
 		
 		
+	}
+
+
+
+
+	// 파일 저장
+	public void saveFile() {
 		
 		
+		ObjectOutputStream oos = null;
+		
+		try {
+			
+			oos = new ObjectOutputStream(new FileOutputStream("PhoneInfoFile.ser"));
+			oos.writeObject(arr);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				oos.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
 		
 		
 	}
+
+	// 파일 열기
+	public void openFile() {
+		
+		
+		ObjectInputStream ois = null;
+		
+		try {
+			ois = new ObjectInputStream(new FileInputStream("PhoneInfoFile.ser"));
+			arr = (ArrayList<PhoneInfo>) ois.readObject();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				ois.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+		
+	}
+
+
 
 
 

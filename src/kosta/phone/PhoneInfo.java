@@ -1,8 +1,9 @@
 package kosta.phone;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class PhoneInfo implements Comparable<PhoneInfo>, Comparator<PhoneInfo>{
+public class PhoneInfo implements Comparable<PhoneInfo>, Comparator<PhoneInfo>, Serializable{
 	// 한 사람에 대한 전화번호 내역
 	// 상태 ( name ,  phoneNo, birth)
 	// 기능 (show : 전화번호부를 출력 )
