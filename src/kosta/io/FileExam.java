@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 public class FileExam {
 
 	public static void main(String[] args) {
-		// 
+		// 디렉토리와 파일내역 출력만 하기
 		
 		
 		File file = new File("C:\\Users\\kosta\\Desktop\\juang\\교재PPT");

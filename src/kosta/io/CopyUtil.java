@@ -3,6 +3,7 @@ package kosta.io;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 
 
 public class CopyUtil {
@@ -26,14 +27,21 @@ public class CopyUtil {
 			String name = arr[i].getName();
 			
 			
-			if(arr[i].isDirectory()) {
+			if(arr[i].isDirectory()) {	// Directory일 경우
 				// 파일이름 똑같게 복사해주어야 한다. 
 				File df = new File(dest, arr[i].getName());
 				df.mkdir();
 				
+				copyDirectory(arr[i], df);	// 디렉토리 안의 디렉토리까지 복사 가능해짐. 재귀함수 때문에
 				
-			}else if(arr[i].isFile()) {
+				
+			}else if(arr[i].isFile()) {	// 일반 파일일 경우
 				// copyFile()로 복사해와야한다.
+				
+				
+				
+				
+				
 				
 				
 				
@@ -41,18 +49,7 @@ public class CopyUtil {
 				System.out.println("★★★★★★★★★★★else야★★★★★★★★★★★★★★");
 			}
 			
-			
-			
-			
 		}
-		
-		
-		
-		
-		
-		
-		
-		
 		
 	}
 	
@@ -68,11 +65,16 @@ public class CopyUtil {
 		FileInputStream  fis = null;
 		FileOutputStream fos = null;
 		
+		byte[] brr = new byte[16];
+		int num = fis.read(brr);
+		
 		
 		try {
 			
 			fis = new FileInputStream(source);
 			fos = new FileOutputStream(dest);
+			
+			int i = 0;
 			
 			
 			

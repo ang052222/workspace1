@@ -8,8 +8,8 @@ public class FileMission {
 		
 		// 재귀함수로 해보자
 		
-		String path = "C:\\Users\\kosta\\Desktop\\juang\\강사님파일";
-		//String path = "C:\\\\Users\\\\kosta\\\\Desktop\\\\juang\\\\교재PPT";
+		//String path = "C:\\Users\\kosta\\Desktop\\juang\\강사님파일";
+		String path = "C:\\Users\\user\\Desktop\\test\\정처기 실기";
 		File file = new File(path);
 		
 		if(file.exists() && file.isDirectory()) {
