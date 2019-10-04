@@ -37,12 +37,8 @@ public class CopyUtil {
 				
 			}else if(arr[i].isFile()) {	// 일반 파일일 경우
 				// copyFile()로 복사해와야한다.
-				
-				
-				
-				
-				
-				
+				File df = new File(dest, arr[i].getName());
+				copyFile(arr[i], df);
 				
 				
 			}else {
@@ -66,7 +62,6 @@ public class CopyUtil {
 		FileOutputStream fos = null;
 		
 		byte[] brr = new byte[16];
-		int num = fis.read(brr);
 		
 		
 		try {
@@ -74,45 +69,29 @@ public class CopyUtil {
 			fis = new FileInputStream(source);
 			fos = new FileOutputStream(dest);
 			
+			
 			int i = 0;
 			
-			
-			
-		
+			while ((i = fis.read(brr, 0, brr.length)) != -1) {
+				
+				fos.write(brr, 0, i);
+				
+			}
 			
 			
 		} catch (Exception e) {
+		
 			e.printStackTrace();
+			
+		}finally {
+			try {
+				
+				fis.close();
+				fos.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
