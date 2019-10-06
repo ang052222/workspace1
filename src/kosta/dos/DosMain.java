@@ -19,45 +19,72 @@ public class DosMain {
 		Scanner sc = new Scanner(System.in);
 		DosHomeWork dh = new DosHomeWork();
 		
-		do{
-		System.out.println();
-		System.out.println("*********미니도스 프로그램***********");
-		System.out.println("1. 파일목록 출력");
-		System.out.println("2. 디렉토리 이동");
-		System.out.println("3. 부모 디렉토리로 이동");
-		System.out.println("4. 새로운 디렉토리 생성");
-		System.out.println("5. 현재 디렉토리에 있는 모든 파일 복사");
-		System.out.println("6. 종료");
-		System.out.print("수행하고 싶은 메뉴를 선택하세요 ▶");
-		String menu = sc.next();
+		String crr = "";
 		
-		switch (menu) {
-		case "1":	dh.fileList(file);
+		do {
 			
-			break;
-		case "2":	System.out.print("이동할 디렉토리를 적으세요 :");
-					String directoryName = sc.next();
-					dh.fileMove(file, directoryName);
+		
+		System.out.print("수행하고 싶은 명령어를 작성하세요 ▶");
+		String word = sc.nextLine();
+		
+		
+		if(word.equals("ls")){
+			dh.fileList(file);
+		
+		}else if(word.contains("tta")){
 			
-			break;
-		case "3":	dh.parentsFileMove();
+			if(word.contains("...")){	// 부모 디렉토리 이동
+				dh.parentsFileMove(fileSource, file);
+				
+			}else if(word.contains(" ")){	// tta 안의 해당 디렉토리 이동
+				String[] ttsRoute = word.split(" ");
+				String crr1 = ttsRoute[1];
+				dh.fileMove(file, crr1);
+				
+			}else if(word.contains("/")){ // tta 안의 특정 디렉토리 안의 파일들을 mkdir한 디렉토리에 파일을 붙여넣는다.
+				
+				String[] copyFileRoute = word.split("/");
+				String cfr1 = copyFileRoute[0];
+				String cfr2 = copyFileRoute[1];
+				String cfr3 = copyFileRoute[2];
+				
+				String mkdirFile = fileSource + "\\" + crr;
+				String copyFile = fileSource + "\\" + cfr2 + "\\" + cfr3;
+				
+				try{
+				dh.psDirectoryCopy(new File(mkdirFile), new File(copyFile));
+				
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+				
+				
+				
+				
+			}
+	
 			
-			break;
-		case "4":	dh.newDirectory();
+		}else if(word.contains("mkdir")){	// tta 안에 새로운 디렉토리를 만든다. 
 			
-			break;
-		case "5":	dh.psDirectoryCopy();
+			String[] newName = word.split(" ");
+			crr = newName[1];
 			
-			break;
-		case "6":	System.out.println("***미니도스 프로그램 종료***");
-					System.out.println("         안녕히가세요!");
+			dh.newDirectory(crr, file);
 			
-			return;
-
-
+			
 		}
 		
-		}while(true);
+		
+		
+		
+		} while (true);
+		
+		
+		
+		
+		
+		
+		
 		
 
 	}
