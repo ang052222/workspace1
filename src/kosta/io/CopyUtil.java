@@ -24,21 +24,21 @@ public class CopyUtil {
 		
 		for(int i = 0 ; i < arr.length ; i++) {
 			
-			String name = arr[i].getName();
+			File sourceFile = arr[i];
 			
 			
-			if(arr[i].isDirectory()) {	// Directory일 경우
+			if(sourceFile.isDirectory()) {	// Directory일 경우
 				// 파일이름 똑같게 복사해주어야 한다. 
-				File df = new File(dest, arr[i].getName());
-				df.mkdir();
+				File df = new File(dest, sourceFile.getName());
+				//df.mkdir();	안 해줘도 됨,,,^^
 				
-				copyDirectory(arr[i], df);	// 디렉토리 안의 디렉토리까지 복사 가능해짐. 재귀함수 때문에
+				copyDirectory(sourceFile, df);	// 디렉토리 안의 디렉토리까지 복사 가능해짐. 재귀함수 때문에
 				
 				
-			}else if(arr[i].isFile()) {	// 일반 파일일 경우
+			}else if(sourceFile.isFile()) {	// 일반 파일일 경우
 				// copyFile()로 복사해와야한다.
-				File df = new File(dest, arr[i].getName());
-				copyFile(arr[i], df);
+				File df = new File(dest, sourceFile.getName());
+				copyFile(sourceFile, df);
 				
 				
 			}else {
@@ -61,8 +61,8 @@ public class CopyUtil {
 		FileInputStream  fis = null;
 		FileOutputStream fos = null;
 		
-		byte[] brr = new byte[16];
-		
+		byte[] brr = new byte[5000];
+		int count = 0;
 		
 		try {
 			
@@ -70,13 +70,17 @@ public class CopyUtil {
 			fos = new FileOutputStream(dest);
 			
 			
-			int i = 0;
-			
-			while ((i = fis.read(brr, 0, brr.length)) != -1) {
+			while ((count = fis.read(brr, 0, brr.length)) != -1) {	// 내 버전
 				
-				fos.write(brr, 0, i);
+				fos.write(brr, 0, count);
 				
 			}
+			
+			
+			/*while((count = fis.read(brr)) != -1) {	선생님 버전
+				
+				fos.write(brr);
+			}*/
 			
 			
 		} catch (Exception e) {
@@ -86,8 +90,13 @@ public class CopyUtil {
 		}finally {
 			try {
 				
-				fis.close();
-				fos.close();
+				if(fis != null) {
+					fis.close();
+				}
+				if(fos != null) {
+					fos.close();
+				}
+				
 			} catch (Exception e2) {
 				e2.printStackTrace();
 			}
